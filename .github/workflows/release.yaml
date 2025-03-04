@@ -1,0 +1,55 @@
+name: Release package
+
+on:
+  push:
+    branches:
+      - main
+      - develop
+  workflow_dispatch:
+
+jobs:
+  commitlint:
+    name: Lint commit messages
+    uses: ./.github/workflows/commitlint.yaml
+
+  build:
+    name: Build TypeScript files
+    uses: ./.github/workflows/build.yaml
+
+  release:
+    name: Release package
+    runs-on: self-hosted
+    permissions:
+      contents: write # publish a GitHub release
+      id-token: write # use OIDC for npm provenance
+      issues: write # comment on released issues
+      packages: write # publish a NPM package
+      pull-requests: write # comment on released pull requests
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.workflow_run.head_branch }}
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          registry-url: 'https://npm.pkg.github.com'
+          scope: '@ivaoaero'
+          cache: 'pnpm'
+
+      - name: Install dependencies
+        run: pnpm install --frozen-lockfile --ignore-scripts --strict-peer-dependencies
+
+      - name: Download build artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: eslint-config-build
+          path: dist
+
+      - name: Release eslint-config package
+        run: pnpm release
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

@@ -1,0 +1,21 @@
+name: Verify build on PR
+
+on:
+  pull_request:
+    branches:
+      - main
+      - develop
+  workflow_dispatch:
+
+jobs:
+  lint:
+    name: Lint project files
+    uses: ./.github/workflows/lint.yaml
+
+  commitlint:
+    name: Lint commit messages
+    uses: ./.github/workflows/commitlint.yaml
+
+  build:
+    name: Build TypeScript files
+    uses: ./.github/workflows/build.yaml

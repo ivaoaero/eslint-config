@@ -7,7 +7,12 @@ export default [
     languageOptions: {
       parserOptions: {
         projectService: {
-          allowDefaultProject: ['eslint.config.js', 'tsup.config.ts'],
+          allowDefaultProject: [
+            'eslint.config.js',
+            'commitlint.config.ts',
+            'release.config.js',
+            'tsup.config.ts',
+          ],
         },
         tsconfigRootDir: import.meta.dirname,
       },
