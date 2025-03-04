@@ -1,8 +1,31 @@
-import ivaoConfig from './dist/index.js';
+import eslint from '@eslint/js';
+import prettier from 'eslint-plugin-prettier/recommended';
+import tseslint from 'typescript-eslint';
 
 export default [
-  ...ivaoConfig.configs.base,
-  ...ivaoConfig.configs.prettier,
+  {
+    ignores: [
+      'node_modules/**/*',
+      'dist/**/*',
+      'build/**/*',
+      'storybook-static/**/*',
+    ],
+  },
+  eslint.configs.recommended,
+  ...tseslint.configs.recommendedTypeChecked,
+  {
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+  },
+  {
+    files: ['**/*.js'],
+    ...tseslint.configs.disableTypeChecked,
+  },
+  prettier,
   {
     languageOptions: {
       parserOptions: {
