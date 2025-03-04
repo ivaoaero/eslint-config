@@ -8,7 +8,13 @@ on:
   workflow_dispatch:
 
 jobs:
+  install:
+    name: Install dependencies
+    uses: ./.github/workflows/install.yaml
+
   lint:
+    needs: install
+    if: success('install')
     name: Lint project files
     uses: ./.github/workflows/lint.yaml
 
@@ -17,5 +23,7 @@ jobs:
     uses: ./.github/workflows/commitlint.yaml
 
   build:
+    needs: install
+    if: success('install')
     name: Build TypeScript files
     uses: ./.github/workflows/build.yaml

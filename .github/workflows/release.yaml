@@ -8,15 +8,25 @@ on:
   workflow_dispatch:
 
 jobs:
+  install:
+    name: Install dependencies
+    uses: ./.github/workflows/install.yaml
+
   commitlint:
     name: Lint commit messages
     uses: ./.github/workflows/commitlint.yaml
 
   build:
+    needs: install
+    if: success('install')
     name: Build TypeScript files
     uses: ./.github/workflows/build.yaml
 
   release:
+    needs:
+      - install
+      - build
+    if: success('install') && success('build')
     name: Release package
     runs-on: self-hosted
     permissions:
