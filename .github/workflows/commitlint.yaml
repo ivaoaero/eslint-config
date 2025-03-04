@@ -13,3 +13,5 @@ jobs:
           ref: ${{ github.event.workflow_run.head_branch }}
 
       - uses: wagoid/commitlint-github-action@v6
+        with:
+          configFile: './commitlint.config.ts'
