@@ -8,16 +8,16 @@ To use this config, follow the installation instructions.
 Install the following packages:
 
 - `eslint`
-- `@ivaoaero/eslint-config`
+- `@ivao/eslint-config`
 
-`yarn add -D eslint @ivaoaero/eslint-config` or `pnpm add -D eslint @ivaoaero/eslint-config`
+`npm add --save-dev eslint @ivao/eslint-config` or `yarn add -D eslint @ivao/eslint-config` or `pnpm add -D eslint @ivao/eslint-config`
 
 ### `eslint.config.(m)js`
 
 You must add a `eslint.config.(m)js` file to your project to use this config package:
 
 ```js
-import ivaoConfig from '@ivaoaero/eslint-config';
+import ivaoConfig from '@ivao/eslint-config';
 
 export default [
   ...ivaoConfig.configs.base,
