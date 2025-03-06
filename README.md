@@ -1,6 +1,6 @@
 # IVAO ESLint config
 
-This package is a shared configuration file for EsLint.
+This package is a shared configuration file for ESLint.
 To use this config, follow the installation instructions.
 
 ## Installation
