@@ -6,11 +6,6 @@ export default {
     {
       name: 'main',
     },
-    {
-      name: 'develop',
-      channel: 'next',
-      prerelease: true,
-    },
   ],
   plugins: [
     '@semantic-release/commit-analyzer',
