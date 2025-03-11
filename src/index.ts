@@ -23,5 +23,5 @@ export default {
     'base' | 'prettier' | 'react' | 'storybook' | 'tailwind',
     Config[]
   >;
-  setups: Record<'reactRecommended', Config[]>;
+  setups: Record<'reactRecommended' | 'reactRecommendedNoPrettier', Config[]>;
 };
