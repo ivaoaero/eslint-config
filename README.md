@@ -62,12 +62,29 @@ Enables rules and plugins for storybook development.
 
 Enables ESLint rules for TailwindCSS.
 
+> This rule is not enabled automatically, because at time of writing, the eslint tailwind plugin does not support tailwind v4.
+
+##### Installation
+
+> _Works for tailwind v3 only!_
+
+```js
+import ivaoConfig from '@ivao/eslint-config';
+import ivaoTaliwindConfig from '@ivao/eslint-config';
+
+export default [
+  // ...
+  ...ivaoTaliwindConfig,
+  // ...
+];
+```
+
 ### `setups`
 
 #### `reactRecommended`
 
-The setup enables the configs `base`, `prettier`, `react`, `tailwind`.
+The setup enables the configs `base`, `prettier`, `react`.
 
 #### `reactRecommendedNoPrettier`
 
-The setup enables the configs `base`, `react`, `tailwind`.
+The setup enables the configs `base`, `react`.

@@ -5,12 +5,20 @@
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
-  "module": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
-    "dist/index.js",
-    "dist/index.d.ts"
+    "dist"
   ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./tailwind": {
+      "types": "./dist/tailwind.d.ts",
+      "default": "./dist/tailwind.js"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/ivaoaero/eslint-config.git"

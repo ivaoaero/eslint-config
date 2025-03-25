@@ -4,7 +4,6 @@ import base from './base';
 import prettier from './prettier';
 import react from './react';
 import storybook from './storybook';
-import tailwind from './tailwind';
 
 export default {
   configs: {
@@ -12,16 +11,12 @@ export default {
     prettier,
     react,
     storybook,
-    tailwind,
   },
   setups: {
-    reactRecommended: [...base, ...prettier, ...react, ...tailwind],
-    reactRecommendedNoPrettier: [...base, ...react, ...tailwind],
+    reactRecommended: [...base, ...prettier, ...react],
+    reactRecommendedNoPrettier: [...base, ...react],
   },
 } as {
-  configs: Record<
-    'base' | 'prettier' | 'react' | 'storybook' | 'tailwind',
-    Config[]
-  >;
+  configs: Record<'base' | 'prettier' | 'react' | 'storybook', Config[]>;
   setups: Record<'reactRecommended' | 'reactRecommendedNoPrettier', Config[]>;
 };
