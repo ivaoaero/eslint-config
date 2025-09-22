@@ -58,8 +58,8 @@ importers:
         specifier: 4.7.0
         version: 4.7.0(prettier@3.6.2)
       '@ivao/prettier-config':
-        specifier: 1.1.0
-        version: 1.1.0(@ianvs/prettier-plugin-sort-imports@4.7.0(prettier@3.6.2))(prettier-plugin-tailwindcss@0.6.14(@ianvs/prettier-plugin-sort-imports@4.7.0(prettier@3.6.2))(prettier@3.6.2))(prettier@3.6.2)
+        specifier: 1.2.0
+        version: 1.2.0(@ianvs/prettier-plugin-sort-imports@4.7.0(prettier@3.6.2))(prettier-plugin-tailwindcss@0.6.14(@ianvs/prettier-plugin-sort-imports@4.7.0(prettier@3.6.2))(prettier@3.6.2))(prettier@3.6.2)
       '@semantic-release/git':
         specifier: 10.0.1
         version: 10.0.1(semantic-release@24.2.9(typescript@5.7.3))
@@ -446,12 +446,12 @@ packages:
     resolution: {integrity: sha512-O8jcjabXaleOG9DQ0+ARXWZBTfnP4WNAqzuiJK7ll44AmxGKv/J2M4TPjxjY3znBCfvBXFzucm1twdyFybFqEA==}
     engines: {node: '>=12'}
 
-  '@ivao/prettier-config@1.1.0':
-    resolution: {integrity: sha512-L5NsWPJknyTZSTf6fitHFie33QHyT0MxqqSXL3Mb5y60ACngsnwnKxbW5XePCnzarhIntjfaegxlCPIUO7tP+A==}
+  '@ivao/prettier-config@1.2.0':
+    resolution: {integrity: sha512-LK3IjXoEK1QthCnhQX7SKLZsBRJrnimshmlzdDO5SWImMoMAuNF/gaSkIcPy4f919hgHaT0JIEgeznkXYUxEkw==}
     peerDependencies:
-      '@ianvs/prettier-plugin-sort-imports': 4.4.1
-      prettier: 3.5.3
-      prettier-plugin-tailwindcss: 0.6.11
+      '@ianvs/prettier-plugin-sort-imports': 4.7.0
+      prettier: 3.6.2
+      prettier-plugin-tailwindcss: 0.6.14
 
   '@jridgewell/gen-mapping@0.3.13':
     resolution: {integrity: sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA==}
@@ -3635,7 +3635,7 @@ snapshots:
       wrap-ansi: 8.1.0
       wrap-ansi-cjs: wrap-ansi@7.0.0
 
-  '@ivao/prettier-config@1.1.0(@ianvs/prettier-plugin-sort-imports@4.7.0(prettier@3.6.2))(prettier-plugin-tailwindcss@0.6.14(@ianvs/prettier-plugin-sort-imports@4.7.0(prettier@3.6.2))(prettier@3.6.2))(prettier@3.6.2)':
+  '@ivao/prettier-config@1.2.0(@ianvs/prettier-plugin-sort-imports@4.7.0(prettier@3.6.2))(prettier-plugin-tailwindcss@0.6.14(@ianvs/prettier-plugin-sort-imports@4.7.0(prettier@3.6.2))(prettier@3.6.2))(prettier@3.6.2)':
     dependencies:
       '@ianvs/prettier-plugin-sort-imports': 4.7.0(prettier@3.6.2)
       prettier: 3.6.2
