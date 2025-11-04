@@ -49,17 +49,17 @@
     "release": "semantic-release"
   },
   "dependencies": {
-    "@eslint/js": "9.36.0",
+    "@eslint/js": "9.39.1",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-jsx-a11y": "6.10.2",
     "eslint-plugin-prettier": "5.5.4",
     "eslint-plugin-react": "7.37.5",
-    "eslint-plugin-react-hooks": "5.2.0",
-    "eslint-plugin-react-refresh": "0.4.20",
-    "eslint-plugin-storybook": "9.1.7",
+    "eslint-plugin-react-hooks": "7.0.1",
+    "eslint-plugin-react-refresh": "0.4.24",
+    "eslint-plugin-storybook": "10.0.3",
     "eslint-plugin-tailwindcss": "3.18.2",
-    "globals": "16.4.0",
-    "typescript-eslint": "8.44.0"
+    "globals": "16.5.0",
+    "typescript-eslint": "8.46.3"
   },
   "devDependencies": {
     "@commitlint/cli": "19.8.1",
@@ -70,16 +70,16 @@
     "@semantic-release/git": "10.0.1",
     "@semantic-release/github": "11.0.6",
     "@semantic-release/npm": "12.0.2",
-    "@types/eslint-plugin-jsx-a11y": "6.10.0",
+    "@types/eslint-plugin-jsx-a11y": "6.10.1",
     "@types/eslint-plugin-tailwindcss": "3.17.0",
     "@types/node": "24.5.2",
     "prettier": "3.6.2",
-    "prettier-plugin-tailwindcss": "0.6.14",
+    "prettier-plugin-tailwindcss": "0.7.1",
     "semantic-release": "24.2.9",
     "tsup": "8.5.0"
   },
   "peerDependencies": {
-    "eslint": "9.36.0"
+    "eslint": "9.39.1"
   },
   "publishConfig": {
     "access": "public"

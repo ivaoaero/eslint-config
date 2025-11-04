@@ -7,6 +7,13 @@ import tseslint from 'typescript-eslint';
 
 import type { Config } from 'typescript-eslint';
 
+const browserGlobals = {
+  ...globals.browser,
+  AudioWorkletGlobalScope: false, // this is the default,
+};
+// @ts-expect-error strange
+delete browserGlobals['AudioWorkletGlobalScope '];
+
 export default tseslint.config(
   {
     files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
@@ -21,7 +28,7 @@ export default tseslint.config(
     languageOptions: {
       globals: {
         ...globals.serviceworker,
-        ...globals.browser,
+        ...browserGlobals,
       },
     },
     rules: {
