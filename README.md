@@ -56,7 +56,10 @@ Enables many React ESLint plugins. Checkout `src/react.ts` for more information.
 
 #### `storybook`
 
-Enables rules and plugins for storybook development.
+Enables rules and plugins for storybook development
+
+For this config to work, you need to manually install the plugin `eslint-plugin-storybook` in your project.
+The reason is a dependency tree that includes `storybook` in most installations, which is only wanted in specific projects.
 
 #### `tailwind`
 
