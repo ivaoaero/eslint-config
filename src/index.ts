@@ -10,9 +10,17 @@ export default {
     prettier,
     react,
     storybook: () => {
-      // eslint-disable-next-line @typescript-eslint/no-require-imports
-      const storybook = require('./storybook.js') as Config[];
-      return storybook;
+      try {
+        // eslint-disable-next-line @typescript-eslint/no-require-imports,@typescript-eslint/no-unused-expressions,@typescript-eslint/no-unsafe-member-access
+        require('eslint-plugin-storybook/package.json').version;
+
+        // eslint-disable-next-line @typescript-eslint/no-require-imports
+        return require('./storybook.js') as Config[];
+      } catch {
+        throw new Error(
+          "Please install 'eslint-plugin-storybook' to use the Storybook config.",
+        );
+      }
     },
   },
   setups: {
