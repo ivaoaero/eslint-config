@@ -54,6 +54,10 @@ Enables the prettier plugin.
 
 Enables many React ESLint plugins. Checkout `src/react.ts` for more information. _Tip: you can always disable some specific rules in your [`eslint.config.(m)js`](#eslintconfigmjs) file by appending a new block to the export array in which you can overwrite any settings._
 
+##### `react-refresh`
+
+Enables the `react-refresh` plugin, which is used for hot reloading in development. The rule option [`allowConstantExport`](https://github.com/ArnaudBarre/eslint-plugin-react-refresh/blob/v0.5.2/README.md#allowconstantexport-v040) is enabled by default, and should be disabled for non-vite environemnts.
+
 #### `storybook`
 
 Enables rules and plugins for storybook development
