@@ -1,15 +1,10 @@
 import { createRequire } from 'node:module';
 
-
-
 import { type Config } from 'eslint/config';
-
-
 
 import base from './base.js';
 import prettier from './prettier.js';
 import react from './react.js';
-
 
 const loadModule = createRequire(import.meta.url);
 
