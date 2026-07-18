@@ -2,19 +2,10 @@ import jsxA11y from 'eslint-plugin-jsx-a11y';
 import react from 'eslint-plugin-react';
 import reactHooks from 'eslint-plugin-react-hooks';
 import { reactRefresh } from 'eslint-plugin-react-refresh';
+import { defineConfig } from 'eslint/config';
 import globals from 'globals';
-import tseslint from 'typescript-eslint';
 
-import type { Config } from 'typescript-eslint';
-
-const browserGlobals = {
-  ...globals.browser,
-  AudioWorkletGlobalScope: false, // this is the default,
-};
-// @ts-expect-error strange
-delete browserGlobals['AudioWorkletGlobalScope '];
-
-export default tseslint.config(
+export default defineConfig(
   {
     files: ['**/*.{js,jsx,mjs,cjs,ts,tsx}'],
     ...react.configs.flat.recommended,
@@ -28,7 +19,7 @@ export default tseslint.config(
     languageOptions: {
       globals: {
         ...globals.serviceworker,
-        ...browserGlobals,
+        ...globals.browser,
       },
     },
     rules: {
@@ -42,6 +33,8 @@ export default tseslint.config(
   },
   {
     plugins: {
+      // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+      // @ts-expect-error
       'react-hooks': reactHooks,
     },
     rules: {
@@ -88,4 +81,4 @@ export default tseslint.config(
       ],
     },
   },
-) as Config[];
+);

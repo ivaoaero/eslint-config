@@ -4,7 +4,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "type": "module",
-  "main": "dist/index.js",
+  "main": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
@@ -12,11 +12,11 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
+      "default": "./dist/index.mjs"
     },
     "./tailwind": {
       "types": "./dist/tailwind.d.ts",
-      "default": "./dist/tailwind.js"
+      "default": "./dist/tailwind.mjs"
     }
   },
   "repository": {
@@ -42,7 +42,7 @@
     }
   ],
   "scripts": {
-    "build": "tsup",
+    "build": "tsdown",
     "lint": "eslint . --cache --report-unused-disable-directives --max-warnings 0",
     "lint-fix": "eslint . --cache --report-unused-disable-directives --max-warnings 0 --fix",
     "format": "prettier . --write --cache",
@@ -73,13 +73,13 @@
     "@types/eslint-plugin-tailwindcss": "^3.17.0",
     "@types/node": "^24.12.2",
     "prettier": "^3.9.5",
-    "prettier-plugin-tailwindcss": "^0.8.1",
+    "prettier-plugin-tailwindcss": "~0.7.4",
     "semantic-release": "^25.0.8",
-    "tsup": "^8.5.1"
+    "tsdown": "^0.22.9"
   },
   "peerDependencies": {
-    "eslint": "^10.2.1",
-    "eslint-plugin-storybook": "^10.3.5"
+    "eslint": "^10.7.0",
+    "eslint-plugin-storybook": "^10.5.2"
   },
   "peerDependenciesMeta": {
     "eslint-plugin-storybook": {

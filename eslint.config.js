@@ -34,7 +34,7 @@ export default [
             'eslint.config.js',
             'commitlint.config.ts',
             'release.config.js',
-            'tsup.config.ts',
+            'tsdown.config.ts',
           ],
         },
         tsconfigRootDir: import.meta.dirname,

@@ -188,7 +188,7 @@ Temporary Items
 dist
 build
 
-/index.js
-/react.js
-/storybook.js
-/tailwind.js
+/index.mjs
+/react.mjs
+/storybook.mjs
+/tailwind.mjs

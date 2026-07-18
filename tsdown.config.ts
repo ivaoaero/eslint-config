@@ -1,9 +1,8 @@
-import { defineConfig } from 'tsup';
+import { defineConfig } from 'tsdown';
 
 export default defineConfig({
   entry: ['src/**/*.ts'],
-  splitting: false,
-  bundle: false,
+  unbundle: true,
   sourcemap: false,
   clean: true,
   minify: true,

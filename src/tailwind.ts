@@ -1,10 +1,10 @@
 import tailwind from 'eslint-plugin-tailwindcss';
-import tseslint from 'typescript-eslint';
+import { defineConfig } from 'eslint/config';
 
-import type { Config } from 'typescript-eslint';
-
-export default tseslint.config(...tailwind.configs['flat/recommended'], {
+// eslint-disable-next-line @typescript-eslint/ban-ts-comment
+// @ts-expect-error
+export default defineConfig(tailwind.configs.recommended, {
   rules: {
     'tailwindcss/classnames-order': 'error',
   },
-}) as Config[];
+});

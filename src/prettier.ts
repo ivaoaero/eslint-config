@@ -1,6 +1,4 @@
 import prettier from 'eslint-plugin-prettier/recommended';
-import tseslint from 'typescript-eslint';
+import { defineConfig } from 'eslint/config';
 
-import type { Config } from 'typescript-eslint';
-
-export default tseslint.config(prettier) as Config[];
+export default defineConfig(prettier);

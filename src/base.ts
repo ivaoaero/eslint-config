@@ -1,9 +1,8 @@
 import eslint from '@eslint/js';
+import { defineConfig } from 'eslint/config';
 import tseslint from 'typescript-eslint';
 
-import type { Config } from 'typescript-eslint';
-
-export default tseslint.config(
+export default defineConfig(
   {
     ignores: [
       'node_modules/**/*',
@@ -13,7 +12,7 @@ export default tseslint.config(
     ],
   },
   eslint.configs.recommended,
-  ...tseslint.configs.recommendedTypeChecked,
+  tseslint.configs.recommendedTypeChecked,
   {
     languageOptions: {
       parserOptions: {
@@ -26,4 +25,4 @@ export default tseslint.config(
     files: ['**/*.js'],
     ...tseslint.configs.disableTypeChecked,
   },
-) as Config[];
+);

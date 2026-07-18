@@ -1,4 +1,4 @@
-import { type Config } from 'typescript-eslint';
+import { type Config } from 'eslint/config';
 
 import base from './base.js';
 import prettier from './prettier.js';
@@ -27,7 +27,7 @@ export default {
     reactRecommended: [...base, ...prettier, ...react],
     reactRecommendedNoPrettier: [...base, ...react],
   },
-} as {
+} satisfies {
   configs: Record<'base' | 'prettier' | 'react', Config[]> & {
     storybook: () => Config[];
   };
