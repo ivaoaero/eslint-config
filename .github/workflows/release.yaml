@@ -4,7 +4,7 @@ on:
   push:
     branches:
       - main
-      - develop
+      - tailwind-v3
   workflow_dispatch:
 
 permissions:

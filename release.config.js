@@ -6,6 +6,11 @@ export default {
     {
       name: 'main',
     },
+    {
+      name: 'tailwind-v3',
+      range: '3.x',
+      channel: 'tailwind-v3',
+    },
   ],
   plugins: [
     '@semantic-release/commit-analyzer',

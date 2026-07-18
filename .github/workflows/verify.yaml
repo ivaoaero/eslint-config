@@ -5,6 +5,7 @@ on:
     branches:
       - main
       - develop
+      - tailwind-v3
   workflow_dispatch:
 
 jobs:
