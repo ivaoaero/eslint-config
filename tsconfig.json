@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "ignoreDeprecations": "6.0",
     "composite": false,
     "declaration": false,
     "declarationMap": false,
@@ -8,6 +9,7 @@
     "allowSyntheticDefaultImports": true,
     "inlineSources": false,
     "moduleResolution": "bundler",
+    "types": ["node"],
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "strict": true,
