@@ -10,7 +10,9 @@ Install the following packages:
 - `eslint`
 - `@ivao/eslint-config`
 
-`npm add --save-dev eslint @ivao/eslint-config` or `yarn add -D eslint @ivao/eslint-config` or `pnpm add -D eslint @ivao/eslint-config`
+`npm add --save-dev eslint @ivao/eslint-config` or
+`yarn add -D eslint @ivao/eslint-config` or
+`pnpm add -D eslint @ivao/eslint-config`
 
 ### `eslint.config.(m)js`
 
@@ -60,10 +62,24 @@ Enables the `react-refresh` plugin, which is used for hot reloading in developme
 
 #### `storybook`
 
-Enables rules and plugins for storybook development
+Enables rules and plugins for Storybook development.
 
-For this config to work, you need to manually install the plugin `eslint-plugin-storybook` in your project.
-The reason is a dependency tree that includes `storybook` in most installations, which is only wanted in specific projects.
+For this config to work, install `eslint-plugin-storybook` in your project. It is
+an optional peer dependency because its dependency tree includes Storybook,
+which is only needed by some projects.
+
+`npm add --save-dev eslint-plugin-storybook` or
+`yarn add -D eslint-plugin-storybook` or
+`pnpm add -D eslint-plugin-storybook`
+
+```js
+import ivaoConfig from '@ivao/eslint-config';
+
+export default [
+  // ...
+  ...ivaoConfig.configs.storybook(),
+];
+```
 
 #### `tailwind`
 
@@ -77,7 +93,7 @@ Enables ESLint rules for TailwindCSS.
 
 ```js
 import ivaoConfig from '@ivao/eslint-config';
-import ivaoTaliwindConfig from '@ivao/eslint-config';
+import ivaoTaliwindConfig from '@ivao/eslint-config/tailwind';
 
 export default [
   // ...
