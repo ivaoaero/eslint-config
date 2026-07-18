@@ -1,2 +1,6 @@
+allowBuilds:
+  esbuild: true
+minimumReleaseAgeExclude:
+  - semantic-release@25.0.8
 onlyBuiltDependencies:
   - esbuild
