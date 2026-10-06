@@ -71,7 +71,7 @@
     "@semantic-release/npm": "^13.1.5",
     "@types/eslint-plugin-jsx-a11y": "^6.10.1",
     "@types/eslint-plugin-tailwindcss": "^3.17.0",
-    "@types/node": "^24.13.3",
+    "@types/node": "^24.19.1",
     "prettier": "^3.9.6",
     "prettier-plugin-tailwindcss": "~0.8.1",
     "semantic-release": "^25.0.8",
@@ -90,5 +90,5 @@
     "access": "public"
   },
   "prettier": "@ivao/prettier-config",
-  "packageManager": "pnpm@11.14.0+sha512.66c1ac4c7d4762d6d7dde44c7f3e5a73591ed0a0806e751d4ed32d4f004f25b2285a906b1fd8a9e3e621df3b4e2858bf88e50e0cf626bedbe977fe434a5caf85"
+  "packageManager": "pnpm@12.9.1+sha512.06b055fff5cd20dc12781de173ced3310ce0951bf2ec620211a16045d5444d5c93a663210764ef29a653a610459ba0368f0e74f84d80c54723cf95aae7bc0d6d"
 }
